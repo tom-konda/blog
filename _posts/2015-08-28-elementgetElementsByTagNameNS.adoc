@@ -1,6 +1,6 @@
 = element.getElementsByTagNameNS() で要素の取得がうまくいかないと思ったら、やり方が間違っていた
-:hp-tags: JavaScript, DOM, XML
 :published_at: 2015-08-28
+:hp-tags: JavaScript, DOM, XML
 
 基盤地図情報のXMLデータを使ったツールを作ろうとした際に、XML文書が妥当な物かをチェックするために、下記のコードで、 element.getElementsByTagNameNS() で名前空間と要素で判断しようとしたところ、lengthが0になってしまい失敗。
 
