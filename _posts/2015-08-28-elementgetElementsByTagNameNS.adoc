@@ -1,7 +1,8 @@
 = element.getElementsByTagNameNS() で要素の取得がうまくいかないと思ったら、やり方が間違っていた
-:hp-tags: JavaScript, DOM, Electron, XML
+:hp-tags: JavaScript, DOM, XML
+:published_at: 2015-08-28
 
-基盤地図情報のXMLデータを使ったツールを作ろうとした際に、XML文書が妥当な物かをチェックするために、下記のコードでElectronの renderer 内で、 element.getElementsByTagNameNS() で名前空間と要素で判断しようとしたところ、lengthが0になってしまい失敗。
+基盤地図情報のXMLデータを使ったツールを作ろうとした際に、XML文書が妥当な物かをチェックするために、下記のコードで、 element.getElementsByTagNameNS() で名前空間と要素で判断しようとしたところ、lengthが0になってしまい失敗。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -27,7 +28,25 @@ var isValidXML = function (dom) {
   return namespaces.every(function (value, index, array) {
     return dom.getElementsByTagNameNS(value, 'Dataset').length === 1 ? true : false;
   });
-}
+};
 ```
 
-Developer Toolsを確認して調査したら、
+Developer Toolsを確認して調査しつつ、lengthが1になるように試行錯誤したところ、以下のようにJavaScriptを修正したら取れるようになった。
+
+```js
+var isValidXML = function (dom) {
+  var searchElementNSPair = [
+    {
+      'element': 'Dataset',
+      'namespace': 'http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema',
+    },
+    {
+      'element': 'description',
+      'namespace': 'http://www.opengis.net/gml/3.2',
+    },
+  ];
+  var isValid = searchElementNSPair.every(function (value, index, array) {
+    return dom.getElementsByTagNameNS(value.namespace, value.element).length === 1 ? true : false;
+  });
+};
+```
