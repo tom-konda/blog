@@ -1,0 +1,12 @@
+= drupal_add_js でファイル追加時の備忘録
+:hp-tags: JavaScript, Drupal
+
+JavaScriptの圧縮をしている時に正常に動かなくなるので、メモとして残しておく。
+
+```php:my_module.module
+// 第2引数の配列で読み込みの方式を指定する
+drupal_add_js(
+  drupal_get_path('module', 'my_module').'/js/myjs.js',
+  array('type' => 'file')
+);
+```
