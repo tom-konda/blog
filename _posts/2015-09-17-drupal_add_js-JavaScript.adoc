@@ -1,5 +1,5 @@
 = drupal_add_js() でJavaScriptファイル追加時の備忘録
-:hp-tags: JavaScript, Drupal
+:hp-tags: JavaScript, Drupal7
 :published_at: 2015-09-17
 
 JavaScriptの圧縮をしている時に正常に動かなくなるので、メモとして残しておく。
