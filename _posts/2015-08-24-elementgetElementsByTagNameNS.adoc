@@ -1,0 +1,33 @@
+= element.getElementsByTagNameNS() で要素の取得がうまくいかないと思ったら、やり方が間違っていた
+:hp-tags: JavaScript, DOM, Electron, XML
+
+基盤地図情報のXMLデータを使ったツールを作ろうとした際に、XML文書が妥当な物かをチェックするために、下記のコードでElectronの renderer 内で、 element.getElementsByTagNameNS() で名前空間と要素で判断しようとしたところ、lengthが0になってしまい失敗。
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Dataset xsi:schemaLocation="http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema FGD_GMLSchema.xsd"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema"
+	gml:id="Dataset1">
+  <gml:description>基盤地図情報メタデータ ID=fmdid:15-0701</gml:description>
+  <gml:name>基盤地図情報ダウンロードデータ（GML版）</gml:name>
+</Dataset>
+```
+
+```js
+var isValidXML = function (dom) {
+  var namespaces = [
+    'http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema',
+    'http://www.opengis.net/gml/3.2',
+    'http://www.w3.org/2001/XMLSchema-instance',
+    'http://www.w3.org/1999/xlink',
+  ];
+  return namespaces.every(function (value, index, array) {
+    return dom.getElementsByTagNameNS(value, 'Dataset').length === 1 ? true : false;
+  });
+}
+```
+
+Developer Toolsを確認して調査したら、
