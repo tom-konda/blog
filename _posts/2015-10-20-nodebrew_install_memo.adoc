@@ -1,0 +1,32 @@
+= Nodebrew インストール手順メモ
+:hp-alt-title: nodebrew_install_memo
+:hp-tags: Node.js, Shell Script
+Yosemiteでは、[Homebrewからはインストールできない](http://qiita.com/armorik83/items/ed97c618a55d9c13c34b)ので、
+
+== XCode Command Line Tools のインストール
+[source,shell]
+----
+$ xcode-select --install
+----
+
+== Homebrew のインストール
+[source,shell]
+----
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+----
+
+== Nodebrew のインストール
+[source,shell]
+----
+$ brew install nodebrew
+$ echo export PATH=$HOME/.nodebrew/current/bin:$PATH >> ~/.bash_profile
+$ source ~/.bash_profile
+----
+
+== Node.js のインストール
+[source,shell]
+----
+$ brew install nodebrew
+$ echo export PATH=$HOME/.nodebrew/current/bin:$PATH >> ~/.bash_profile
+$ source ~/.bash_profile
+----
