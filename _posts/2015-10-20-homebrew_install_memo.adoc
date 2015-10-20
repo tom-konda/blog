@@ -1,0 +1,15 @@
+= Homebrewのインストール手順メモ
+:hp-alt-title: homebrew_install_memo
+:hp-tags: Memo,Shell Script
+
+== XCode Command Line Tools のインストール
+[source,shell]
+----
+$ xcode-select --install
+----
+
+== Homebrew のインストール
+[source,shell]
+----
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+----
