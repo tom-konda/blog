@@ -24,13 +24,13 @@ $ source ~/.bash_profile
 ----
 # Homebrewでインストールしてしまった場合は、アンインストールする
 $ brew uninstall nodebrew
-$ echo export PATH=$HOME/.nodebrew/current/bin:$PATH >> ~/.bashrc
-$ source ~/.bashrc
+$ echo export PATH=$HOME/.nodebrew/current/bin:$PATH >> ~/.bash_profile
+$ source ~/.bash_profile
 
 ----
 
 == Node.js のインストール
 [source,shell]
 ----
-$ nodebrew install 4.2.1
+$ nodebrew install 4.2.2
 ----
