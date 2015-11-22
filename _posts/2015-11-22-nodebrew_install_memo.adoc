@@ -1,6 +1,7 @@
 = Nodebrew インストール手順メモ（Mac）
 :hp-alt-title: nodebrew_install_memo
 :hp-tags: Node.js, Shell Script, Memo
+:published_at: 2015-11-22
 
 
 IMPORTANT: Yosemiteでは、Homebrewからはインストールできない(http://qiita.com/armorik83/items/ed97c618a55d9c13c34b) ので、(https://github.com/hokaccha/nodebrew#install) にある方法を使用する
