@@ -1,0 +1,10 @@
+= 各ブラウザの仕様の一覧
+:hp-alt-title: browsers_spec
+:hp-tags: MS Edge, Safari, Firefox
+:published_at: 2016-01-07
+
+http://qiita.com/tom_konda/items/864e285defc1b17f7a0e[Qiitaに投稿した時] に調べた各ブラウザの +++<abbr title="Document Object Model">DOM</abbr>+++ 仕様が載っているURLへのリンク集。+++<abbr title="Microsoft Deverolper Network">MSDN</abbr>+++ や +++<abbr title="Mozilla Deverolper Network">MDN</abbr>+++ は有名だけど、Safari は初めて知った。そして、Google Chrome は見つけられず。
+
+Internet Explorer & Edge:: https://msdn.microsoft.com/library/hh772401%28v=vs.85%29.aspx
+Safari:: https://developer.apple.com/library/safari/navigation/
+Firefox:: https://developer.mozilla.org/
