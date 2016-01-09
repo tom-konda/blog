@@ -2,3 +2,21 @@
 :hp-alt-title: construct_phpenv_for_mac
 :hp-tags: PHP, Mac OSX
 :published_at: 
+
+以下のコマンドで、Mac に anyenv を導入することができる。
+[source,sh]
+$ git clone https://github.com/riywo/anyenv ~/.anyenv
+$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
+$ echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
+$ exec $SHELL -l
+
+導入が終わったら、
+
+[source,sh]
+$ anyenv version
+Usage: anyenv <command> [<args>]
+
+Some useful anyenv commands are:
+（省略）
+
+で
