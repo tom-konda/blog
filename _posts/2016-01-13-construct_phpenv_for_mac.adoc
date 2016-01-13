@@ -1,10 +1,11 @@
 = anyenv によるMacへの phpenv + phpbuild 環境の構築
 :hp-alt-title: construct_phpenv_for_mac
 :hp-tags: PHP, Mac OSX
-:published_at: 
+:published_at: 2016-01-13
 
+環境の構築は Yosemite にて確認。
 以下のコマンドで、Mac に anyenv を導入することができる。
-[source,sh]
+[source,shell]
 $ git clone https://github.com/riywo/anyenv ~/.anyenv
 $ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
 $ echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
@@ -12,11 +13,34 @@ $ exec $SHELL -l
 
 導入が終わったら、
 
-[source,sh]
+[source,shell]
+----
 $ anyenv version
 Usage: anyenv <command> [<args>]
 
 Some useful anyenv commands are:
 （省略）
+----
+でインストールされたことを確認。
+http://qiita.com/yutackall/items/6c48cf56317d8501f6df[Mac に anyenv でサクッとマルチ開発環境構築]を参考に、プラグインを導入する。導入したら、`anyenv` から `phpenv` をインストールする。
+[source, shell]
+$ mkdir ~/.anyenv/plugins
+$ git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
+$ git clone https://github.com/znz/anyenv-git.git ~/.anyenv/plugins/anyenv-git
+$ anyenv intall phpenv
 
-で
+https://www.aruneko.net/archives/1299[[Yosemite\]anyenvでphpenv] を参考に、bison 2.7 をインストールし、一時的に bison 2.7 を使用するように変更。
+
+[source,shell]
+$ brew install re2c libjpeg libpng libmcrypt
+$ brew install autoconf # 無いとエラー
+$ brew install homebrew/versions/bison27
+$ brew link bison27 --force
+
+anyenv updates で最新版のビルド情報に更新してからインストールコマンドを実行し、全体で使用する PHP のバージョンを最新版の変更し、bison のリンクを元に戻せばインストール完了。
+
+[source,shell]
+$ anyenv updates
+$ phpenv install 7.0.2
+$ phpenv global 7.0.2
+$ brew unlink bison27
