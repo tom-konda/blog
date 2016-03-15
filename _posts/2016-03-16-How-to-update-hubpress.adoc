@@ -1,0 +1,14 @@
+= Hubpress のアップデート方法
+:hp-alt-title: How to update hubpress
+:hp-tags: Hubpress,Github
+
+Hubpress がアップデートされていたので、そのアップデート手順を記載する。
+
+. Hubpress を Fork している、Githubのレポジトリページを開く
+. Compare をクリックする
+. base fork を自分のレポジトリに変更する
+. compare across fork をクリックする
+. head fork を Hubpress 公式に変更する
+. Create Pull Request をクリックする
+. 適当に入力して、+++<abbr title="Pull Request">PR</abbr>+++ をする
+. Fork しているレポジトリの PR 一覧に飛んだら、作成した PR を承認する
