@@ -22,7 +22,7 @@
     <meta property="og:description" content="環境の構築は Yosemite にて確認。 以下のコマンドで、Mac に anyenv を導入することができる。 $ git clone https://github.com/riywo/anyenv ~/.anyenv $ echo &#x27;export PATH=&quot;$HOME/.anyenv/bin:$PATH&quot;&#x27; &amp;gt;&amp;gt; ~/.bash_profile $ echo &#x27;eval &quot;$(anyenv init -)&quot;&#x27; &amp;gt;&amp;gt; ~/.bash_profile $ exec $SHELL..." />
     <meta property="og:url" content="https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html" />
     <meta property="article:published_time" content="2016-01-12T15:00:00.000Z" />
-    <meta property="article:modified_time" content="2016-04-10T11:46:19.055Z" />
+    <meta property="article:modified_time" content="2016-04-10T11:52:29.884Z" />
     <meta property="article:tag" content="PHP" />
     <meta property="article:tag" content="Mac OSX" />
     
@@ -46,7 +46,7 @@
     "headline": "anyenv によるMacへの phpenv + phpbuild 環境の構築",
     "url": "https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html",
     "datePublished": "2016-01-12T15:00:00.000Z",
-    "dateModified": "2016-04-10T11:46:19.055Z",
+    "dateModified": "2016-04-10T11:52:29.884Z",
     "keywords": "PHP,  Mac OSX",
     "description": "環境の構築は Yosemite にて確認。 以下のコマンドで、Mac に anyenv を導入することができる。 $ git clone https://github.com/riywo/anyenv ~/.anyenv $ echo &#x27;export PATH=&quot;$HOME/.anyenv/bin:$PATH&quot;&#x27; &amp;gt;&amp;gt; ~/.bash_profile $ echo &#x27;eval &quot;$(anyenv init -)&quot;&#x27; &amp;gt;&amp;gt; ~/.bash_profile $ exec $SHELL..."
 }
@@ -136,7 +136,7 @@ $ brew link bison27 --force</code></pre>
 <td class="content">
 2016/04/10 追記
 configure: error: Cannot find OpenSSL&#8217;s &lt;evp.h&gt; が出たら、
-<code>$ brew update</code> と <code>$ brew upgrade</code> を行う。（ <a href="http://qiita.com/saltyshiomix/items/aacb5f9635c0d3201174">参考</a>）
+<code>xcode-select --install</code> や <code>$ brew update</code> 、 <code>$ brew upgrade</code> を行う。（ <a href="http://qiita.com/saltyshiomix/items/aacb5f9635c0d3201174">参考</a>）
 </td>
 </tr>
 </table>
