@@ -40,7 +40,7 @@ $ brew link bison27 --force
 [NOTE]
 2016/04/10 追記
 configure: error: Cannot find OpenSSL's <evp.h> が出たら、
-`$ brew update` と `$ brew upgrade` を行う。（ http://qiita.com/saltyshiomix/items/aacb5f9635c0d3201174[参考]）
+`xcode-select --install` や `$ brew update` 、 `$ brew upgrade` を行う。（ http://qiita.com/saltyshiomix/items/aacb5f9635c0d3201174[参考]）
 
 anyenv updates で最新版のビルド情報に更新してからインストールコマンドを実行し、全体で使用する PHP のバージョンを最新版の変更し、bison のリンクを元に戻せばインストール完了。
 
