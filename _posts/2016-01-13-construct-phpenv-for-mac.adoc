@@ -42,6 +42,10 @@ $ brew link bison27 --force
 configure: error: Cannot find OpenSSL's <evp.h> が出たら、
 `xcode-select --install` や `$ brew update` 、 `$ brew upgrade` を行う。（ http://qiita.com/saltyshiomix/items/aacb5f9635c0d3201174[参考]）
 
+[NOTE]
+2016/04/12 追記
+El capitan で libxml2 がリンクされていないとビルドに失敗したので、`brew install libxml2 && brew link libxml2 --force` が必要（ https://github.com/Homebrew/homebrew-php/issues/1931#issuecomment-125519721[libxml2 参考]）。その他にも、OpenSSL の再インストールなどを試みる。（ http://uzulla.hateblo.jp/entry/2015/10/10/001039[OpenSSL 参考]）
+
 anyenv updates で最新版のビルド情報に更新してからインストールコマンドを実行し、全体で使用する PHP のバージョンを最新版の変更し、bison のリンクを元に戻せばインストール完了。
 
 [source,shell]
