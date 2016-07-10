@@ -1,0 +1,3 @@
+= 日本地域の大体の緯度経度の範囲
+:hp-alt-title: Approximately boundary in Japan
+:hp-tags: OpenStreetMap
