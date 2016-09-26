@@ -1,7 +1,46 @@
-= Drupal Meetup Tokyo Vol. 3 に参加してきた
-:hp-alt-title: Drupal Meetup Tokyo Vol. 3
-:hp-tags: Drupal, Conference
+= Drupal Meetup Tokyo Vol.3 に行ってきた
+:hp-alt-title: Impression of Drupal Meetup Tokyo Vol.3
+:hp-tags: PHP, Drupal, Conference
 
 == High Performance JavaScript using Drupal's JavaScript API
 
-[aaa](https://www.drupal.org/node/2805577)
+発表者： Jay Friendly
+
+Drupal Meetup Tokyo Vol. 3 に参加したので、発表の感想などのまとめ。
+
+
+http://www.jaypan.com/tutorial/high-performance-javascript-using-drupal-7s-javascript-api[発表資料]
+
+*Drupal 7* における、Drupal の JavaScript API を利用したハイパフォーマンスなサイトの構築方法に関する発表。
+
+はじめにサーバサイド側で気をつけることについて。
+
+Drupal 7 では、以下の3通りの方法でページに JavaScript を埋め込めるが、
+
+* .info ファイルへの記述
+* `drupal_add_js()` 関数
+* Render Arrays に `#attatched` の追加
+
+JavaScript の制御やキャッシュ、Drupal 8 でも使用可能な観点から、`#attatched` による追加が一番良い。ただし、Render Arrays は `#markup` が無いと無視されるので、JavaScript を埋めたいだけなら空文字を設定する。
+
+JavaScript を埋め込む場所は、scope に記述する事ができ、
+
+header:: head 閉じタグの直前に記述
+footer:: body 閉じタグの直前に記述
+
+という違いがある。
+
+もし、特定のロールなどの条件で JavaScript を埋め込みを除外する時は、`hook_element_view_alter` で該当する要素に `#access = FALSE` を設定する。
+
+次に、クライアントサイド側の JavaScript について。
+
+
+Drupal.behaviors
+* attached の実行
+** DOM の構築完了時
+** 要素が追加された時
+*** 要素追加時は差分のDOMで実行する
+* detached
+** 
+
+スライドで気になったのが、jQuery オブジェクトを変数に代入しているところで、変数名が "$" で始まっていなかったけど、 https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-standards#camelcasing[コーディングスタンダード]によると必須なので、ちょっと引っかかった。（Coder は指摘してくれたっけ？）
