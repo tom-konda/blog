@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[tom-konda的技術メモ]]></title><description><![CDATA[技術的な備忘録やメモを置いておく場所]]></description><link>https://tom-konda.github.io/blog</link><generator>RSS for Node</generator><lastBuildDate>Mon, 26 Sep 2016 08:53:30 GMT</lastBuildDate><atom:link href="https://tom-konda.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Hubpress のアップデート方法]]></title><description><![CDATA[<div class="paragraph">
+<p>Hubpress がアップデートされていたので、そのアップデート手順を記載する。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Hubpress を Fork している、Githubのレポジトリページを開く</p>
+</li>
+<li>
+<p>Compare をクリックする</p>
+</li>
+<li>
+<p>base fork を自分のレポジトリに変更する</p>
+</li>
+<li>
+<p>compare across fork をクリックする</p>
+</li>
+<li>
+<p>head fork を Hubpress 公式に変更する</p>
+</li>
+<li>
+<p>Create Pull Request をクリックする</p>
+</li>
+<li>
+<p>適当に入力して、<abbr title="Pull Request">PR</abbr> をする</p>
+</li>
+<li>
+<p>Fork しているレポジトリの PR 一覧に飛んだら、作成した PR を承認する</p>
+</li>
+</ol>
+</div>]]></description><link>https://tom-konda.github.io/blog/2016/03/16/How-to-update-hubpress.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2016/03/16/How-to-update-hubpress.html</guid><category><![CDATA[Hubpress]]></category><category><![CDATA[Github]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Wed, 16 Mar 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[anyenv によるMacへの phpenv + phpbuild 環境の構築]]></title><description><![CDATA[<div class="paragraph">
+<p>環境の構築は Yosemite にて確認。
+以下のコマンドで、Mac に anyenv を導入することができる。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">$ git clone https://github.com/riywo/anyenv ~/.anyenv
+$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' &gt;&gt; ~/.bash_profile
+$ echo 'eval "$(anyenv init -)"' &gt;&gt; ~/.bash_profile
+$ exec $SHELL -l</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>導入が終わったら、</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">$ anyenv version
+Usage: anyenv &lt;command&gt; [&lt;args&gt;]
+
+Some useful anyenv commands are:
+（省略）</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>でインストールされたことを確認。
+<a href="http://qiita.com/yutackall/items/6c48cf56317d8501f6df">Mac に anyenv でサクッとマルチ開発環境構築</a>を参考に、プラグインを導入する。導入したら、<code>anyenv</code> から <code>phpenv</code> をインストールする。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">$ mkdir ~/.anyenv/plugins
+$ git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
+$ git clone https://github.com/znz/anyenv-git.git ~/.anyenv/plugins/anyenv-git
+$ anyenv intall phpenv</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://www.aruneko.net/archives/1299">[Yosemite]anyenvでphpenv</a> を参考に、bison 2.7 をインストールし、一時的に bison 2.7 を使用するように変更。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">$ brew install re2c libjpeg libpng libmcrypt
+$ brew install autoconf # 無いとエラー
+$ brew install homebrew/versions/bison27
+$ brew link bison27 --force</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+2016/04/10 追記
+configure: error: Cannot find OpenSSL&#8217;s &lt;evp.h&gt; が出たら、
+<code>xcode-select --install</code> や <code>$ brew update</code> 、 <code>$ brew upgrade</code> を行う。（ <a href="http://qiita.com/saltyshiomix/items/aacb5f9635c0d3201174">参考</a>）
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+2016/04/12 追記
+El capitan で libxml2 がリンクされていないとビルドに失敗したので、<code>brew install libxml2 &amp;&amp; brew link libxml2 --force</code> が必要（ <a href="https://github.com/Homebrew/homebrew-php/issues/1931#issuecomment-125519721">libxml2 参考</a>）。その他にも、OpenSSL の再インストールなどを試みる。（ <a href="http://uzulla.hateblo.jp/entry/2015/10/10/001039">OpenSSL 参考</a>）
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>anyenv updates で最新版のビルド情報に更新してからインストールコマンドを実行し、全体で使用する PHP のバージョンを最新版の変更し、bison のリンクを元に戻せばインストール完了。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">$ anyenv updates
+$ phpenv install 7.0.2
+$ phpenv global 7.0.2
+$ brew unlink bison27</code></pre>
+</div>
+</div>]]></description><link>https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html</guid><category><![CDATA[PHP]]></category><category><![CDATA[ Mac OSX]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Wed, 13 Jan 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[各ブラウザの仕様の一覧]]></title><description><![CDATA[<div class="paragraph">
+<p><a href="http://qiita.com/tom_konda/items/864e285defc1b17f7a0e">Qiitaに投稿した時</a> に調べた各ブラウザの <abbr title="Document Object Model">DOM</abbr> 仕様が載っているURLへのリンク集。<abbr title="Microsoft Deverolper Network">MSDN</abbr> や <abbr title="Mozilla Deverolper Network">MDN</abbr> は有名だけど、Safari は初めて知った。そして、Google Chrome は見つけられず。</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Internet Explorer &amp; Edge</dt>
+<dd>
+<p><a href="https://msdn.microsoft.com/library/hh772401%28v=vs.85%29.aspx" class="bare">https://msdn.microsoft.com/library/hh772401%28v=vs.85%29.aspx</a></p>
+</dd>
+<dt class="hdlist1">Safari</dt>
+<dd>
+<p><a href="https://developer.apple.com/library/safari/navigation/" class="bare">https://developer.apple.com/library/safari/navigation/</a></p>
+</dd>
+<dt class="hdlist1">Firefox</dt>
+<dd>
+<p><a href="https://developer.mozilla.org/" class="bare">https://developer.mozilla.org/</a></p>
+</dd>
+</dl>
+</div>]]></description><link>https://tom-konda.github.io/blog/2016/01/07/browsers_spec.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2016/01/07/browsers_spec.html</guid><category><![CDATA[MS Edge]]></category><category><![CDATA[ Safari]]></category><category><![CDATA[ Firefox]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Thu, 07 Jan 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Nodebrew インストール手順メモ（Mac）]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Yosemiteでは、Homebrewからはインストールできない(<a href="http://qiita.com/armorik83/items/ed97c618a55d9c13c34b" class="bare">http://qiita.com/armorik83/items/ed97c618a55d9c13c34b</a>) ので、(<a href="https://github.com/hokaccha/nodebrew#install" class="bare">https://github.com/hokaccha/nodebrew#install</a>) にある方法を使用する
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="__">動作確認</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Mac OS X</dt>
+<dd>
+<p>Yosemite</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nodebrew">Nodebrew のインストール</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+以下のシェルだと現在はうごかない
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">$ brew install nodebrew
+$ echo export PATH=$HOME/.nodebrew/current/bin:$PATH &gt;&gt; ~/.bash_profile
+$ source ~/.bash_profile</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>こちらを使用する。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell"># Homebrewでインストールしてしまった場合は、アンインストールする
+$ brew uninstall nodebrew
+$ curl -L git.io/nodebrew | perl - setup
+$ echo export PATH=$HOME/.nodebrew/current/bin:$PATH &gt;&gt; ~/.bash_profile
+$ source ~/.bash_profile</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_node_js">Node.js のインストール</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-shell" data-lang="shell">$ nodebrew install 4.2.2</code></pre>
+</div>
+</div>
+</div>
+</div>]]></description><link>https://tom-konda.github.io/blog/2015/11/22/nodebrew_install_memo.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2015/11/22/nodebrew_install_memo.html</guid><category><![CDATA[Node.js]]></category><category><![CDATA[ Shell Script]]></category><category><![CDATA[ Memo]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Sun, 22 Nov 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[drupal_add_js() でJavaScriptファイル追加時の備忘録]]></title><description><![CDATA[<div class="paragraph">
+<p>JavaScriptの圧縮をしている時に正常に動かなくなるので、メモとして残しておく。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-php:my_module.module" data-lang="php:my_module.module">// 第2引数の配列で読み込みの方式を指定する
+drupal_add_js(
+  drupal_get_path('module', 'my_module').'/js/myjs.js',
+  array('type' =&gt; 'file')
+);</code></pre>
+</div>
+</div>]]></description><link>https://tom-konda.github.io/blog/2015/09/17/drupal_add_js-JavaScript.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2015/09/17/drupal_add_js-JavaScript.html</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[ Drupal7]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Thu, 17 Sep 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[element.getElementsByTagNameNS() で要素の取得がうまくいかないと思ったら、やり方が間違っていた]]></title><description><![CDATA[<div class="paragraph">
+<p>基盤地図情報のXMLデータを使ったツールを作ろうとした際に、XML文書が妥当な物かをチェックするために、下記のコードで、 element.getElementsByTagNameNS() で名前空間と要素で判断しようとしたところ、lengthが0になってしまい失敗。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;Dataset xsi:schemaLocation="http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema FGD_GMLSchema.xsd"
+	xmlns:gml="http://www.opengis.net/gml/3.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xmlns="http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema"
+	gml:id="Dataset1"&gt;
+  &lt;gml:description&gt;基盤地図情報メタデータ ID=fmdid:15-0701&lt;/gml:description&gt;
+  &lt;gml:name&gt;基盤地図情報ダウンロードデータ（GML版）&lt;/gml:name&gt;
+&lt;/Dataset&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">var isValidXML = function (dom) {
+  var namespaces = [
+    'http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema',
+    'http://www.opengis.net/gml/3.2',
+    'http://www.w3.org/2001/XMLSchema-instance',
+    'http://www.w3.org/1999/xlink',
+  ];
+  return namespaces.every(function (value, index, array) {
+    return dom.getElementsByTagNameNS(value, 'Dataset').length === 1 ? true : false;
+  });
+};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Developer Toolsを確認して調査しつつ、lengthが1になるように試行錯誤したところ、以下のようにJavaScriptを修正したら取れるようになった。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-js" data-lang="js">var isValidXML = function (dom) {
+  var searchElementNSPair = [
+    {
+      'element': 'Dataset',
+      'namespace': 'http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema',
+    },
+    {
+      'element': 'description',
+      'namespace': 'http://www.opengis.net/gml/3.2',
+    },
+  ];
+  var isValid = searchElementNSPair.every(function (value, index, array) {
+    return dom.getElementsByTagNameNS(value.namespace, value.element).length === 1 ? true : false;
+  });
+};</code></pre>
+</div>
+</div>]]></description><link>https://tom-konda.github.io/blog/2015/08/28/elementgetElementsByTagNameNS.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2015/08/28/elementgetElementsByTagNameNS.html</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[ DOM]]></category><category><![CDATA[ XML]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Fri, 28 Aug 2015 00:00:00 GMT</pubDate></item></channel></rss>
