@@ -12,8 +12,18 @@
 
     <link rel="shortcut icon" href="https://tom-konda.github.io/blog/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Open+Sans:400italic,700italic,700,400">
-    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/roon/assets/css/screen.css?v=1510543854228" />
+    <script type="text/javascript" src="//tom-konda.github.io/blog/themes/ichi/assets/js/vendor/fastclick.js?v=1510543951889"></script>
+    <script type="text/javascript" src="//tom-konda.github.io/blog/themes/ichi/assets/js/vendor/modernizr.js?v=1510543951889"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/css/normalize.css?v=1510543951889" />
+    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/css/foundation.min.css?v=1510543951889" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/css/outdatedBrowser.min.css?v=1510543951889">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1510543951889" />
+    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/css/styles.css?v=1510543951889" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
 
     <link rel="canonical" href="https://tom-konda.github.io/blog/https://tom-konda.github.io/blog/author/tom-konda/" />
     <meta name="referrer" content="origin" />
@@ -45,8 +55,73 @@
     
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 </head>
-<body class="author-template author-tom-konda user ">
+<body class="author-template author-tom-konda">
 
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdate" href="http://outdatedbrowser.com/">Update my browser now</a></p>
+</div>
+
+<nav class="top-bar hide-for-large-up" data-topbar >
+  <ul class="title-area">
+    <li class="name">
+
+    </li>
+    <li class="home"><a class="fi-home" href="https://tom-konda.github.io/blog"></a></li>
+    <li class="toggle-topbar"><a href="#" id="trigger-overlay" class="fi-list"></a></li>
+  </ul>
+
+<div class="overlay overlay-scale">
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+        <ul>
+            <li><a href="https://tom-konda.github.io/blog">Home</a></li>
+        </ul>
+    </nav>
+</div>
+
+</nav>
+
+<div class="row">
+
+<div class="small-16 medium-16 large-4 columns right head-area" >
+
+<header class="site-head">
+    <div class="vertical">
+        <div class="site-head-content inner">
+            <ul class="side-nav blog-menu show-for-large-up">
+                <li><a class="fi-home" href="https://tom-konda.github.io/blog"></a></li>
+                <li><a class="fi-torso" href="https://tom-konda.github.io/blog/about"></a></li>
+                <li><a class="fi-mail" href="https://tom-konda.github.io/blog/contact"></a></li>
+            </ul>
+            
+            <h1 class="blog-title">Tom-konda的技術メモ</h1>
+            <hr>
+            <p class="blog-description">技術的な備忘録やメモを置いておく場所</p>
+            <div class="blog-network">
+<!--                 <a href="#" class="fi-social-pinterest"></a>
+                <a href="#" class="fi-social-linkedin"></a>
+                <a href="#" class="fi-social-behance"></a>
+                <a href="#" class="fi-social-deviant-art"></a>
+                <a href="#" class="fi-social-dribbble"></a>
+                <a href="#" class="fi-social-flickr"></a>
+                <a href="#" class="fi-social-github"></a>
+                <a href="#" class="fi-social-skype"></a>
+                <a href="#" class="fi-social-snapchat"></a>
+                <a href="#" class="fi-social-steam"></a>
+                <a href="#" class="fi-social-xbox"></a>
+                <a href="#" class="fi-social-reddit"></a> -->
+                  <a href="https://github.com/tom-konda" class="fi-social-github"></a>
+                  <a href="https://twitter.com/tom_k_en" class="fi-social-twitter"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+</div>
+
+
+<div class="small-16 medium-16 large-12 columns main-column left">
     
 <header role="banner">
     <div class="wrap">
@@ -162,7 +237,6 @@
     <span class="page-number">Page 1 of 1</span>
 </nav>
 
-
 <footer role="contentinfo">
     <div class="inner">
         <div class="vcard">
@@ -186,29 +260,9 @@
     </div>
 </footer>
 
+</div>
 
-
-
-    <script>
-
-
-        function no_schema_links () {
-            var links = document.querySelectorAll('.js-remove-domain-schema');
-            if (links) {
-                for (i = 0; i < links.length; ++i) {
-                    var link = links[i],
-                        text = link.innerHTML,
-                        no_schema = text.replace(/.*?:\/\//g, "");
-                    link.innerHTML = no_schema;
-                }
-            }
-        }
-
-        window.onload = function () {
-            no_schema_links();
-
-        }
-    </script>
+</div>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js?v="></script> 
       <script type="text/javascript">
@@ -223,7 +277,14 @@
         hljs.initHighlightingOnLoad();
       </script>
 
+    <!--[if lte IE 8]>
+        <script type="text/javascript" src="//tom-konda.github.io/blog/themes/ichi/assets/js/outdatedBrowser.min.js?v=1510543951889"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//tom-konda.github.io/blog/themes/ichi/assets/js/min/built.js?v=1510543951889"></script>
 
+    <script>
+      $(document).foundation();
+    </script>
 
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -235,6 +296,5 @@
     ga('send', 'pageview');
 
     </script>
-
 </body>
 </html>
