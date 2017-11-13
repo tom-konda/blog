@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "roon"
+    "name": "saga"
   },
   "urls": {
     "site": "https://tom-konda.github.io/blog",
     "hubpress": "https://tom-konda.github.io/blog",
-    "theme": "//tom-konda.github.io/blog/themes/casper",
+    "theme": "//tom-konda.github.io/blog/themes/roon",
     "images": "https://tom-konda.github.io/blog/images"
   },
   "initialisationConfigComponent": {
