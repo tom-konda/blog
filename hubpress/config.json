@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "uno-zen"
+    "name": "uno"
   },
   "urls": {
     "site": "https://tom-konda.github.io/blog",
     "hubpress": "https://tom-konda.github.io/blog",
-    "theme": "//tom-konda.github.io/blog/themes/the-shell",
+    "theme": "//tom-konda.github.io/blog/themes/uno-zen",
     "images": "https://tom-konda.github.io/blog/images"
   },
   "initialisationConfigComponent": {
