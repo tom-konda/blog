@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script>
+        // UNCOMMENT AND USE YOUR VARIABLES FOR DISQUS AND GOOGLE ANALYTICS
+        // var d_id  = '',
+        //     g_id  = 'UA-XXXXXXXX-X', // Format: UA-########-#, Example: UA-11220899-1
+        //     g_url = 'XXXXXXX.XXX' // Format: #####.####, Example: webdesignporto.com
+    </script>
 
     <title>Tom-konda的技術メモ</title>
     <meta name="description" content="" />
 
     <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="https://tom-konda.github.io/blog/favicon.ico">
-
-    <script type="text/javascript" src="//tom-konda.github.io/blog/themes/ichi/assets/js/vendor/fastclick.js?v=1510543134242"></script>
-    <script type="text/javascript" src="//tom-konda.github.io/blog/themes/ichi/assets/js/vendor/modernizr.js?v=1510543134242"></script>
-
-
-    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/css/normalize.css?v=1510543134242" />
-    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/css/foundation.min.css?v=1510543134242" />
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/css/outdatedBrowser.min.css?v=1510543134242">
-    <![endif]-->
-    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/fonts/foundation-icons/foundation-icons.css?v=1510543134242" />
-    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/ichi/assets/css/styles.css?v=1510543134242" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,700,400|Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" />
+    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/the-shell/assets/highlighter/prettify.css?v=1510543301437" />
+    <link rel="stylesheet" type="text/css" href="//tom-konda.github.io/blog/themes/the-shell/assets/css/screen.css?v=1510543301437" />
 
     <link rel="canonical" href="https://tom-konda.github.io/blog/" />
     <meta name="referrer" content="origin" />
@@ -50,170 +45,111 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css">
     
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-12732179-5', 'auto');
+    ga('send', 'pageview');
+
+    </script>
 </head>
 <body class="home-template">
 
-<div id="outdated">
-    <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdate" href="http://outdatedbrowser.com/">Update my browser now</a></p>
-</div>
+    
 
-<nav class="top-bar hide-for-large-up" data-topbar >
-  <ul class="title-area">
-    <li class="name">
+<header id="site-head" >
+    <div class="vertical animated bounceInDown">
+        <div id="site-head-content" class="inner">
 
-    </li>
-    <li class="home"><a class="fi-home" href="https://tom-konda.github.io/blog"></a></li>
-    <li class="toggle-topbar"><a href="#" id="trigger-overlay" class="fi-list"></a></li>
-  </ul>
-
-<div class="overlay overlay-scale">
-    <button type="button" class="overlay-close">Close</button>
-    <nav>
-        <ul>
-            <li><a href="https://tom-konda.github.io/blog">Home</a></li>
-        </ul>
-    </nav>
-</div>
-
-</nav>
-
-<div class="row">
-
-<div class="small-16 medium-16 large-4 columns right head-area" >
-
-<header class="site-head">
-    <div class="vertical">
-        <div class="site-head-content inner">
-            <ul class="side-nav blog-menu show-for-large-up">
-                <li><a class="fi-home" href="https://tom-konda.github.io/blog"></a></li>
-                <li><a class="fi-torso" href="https://tom-konda.github.io/blog/about"></a></li>
-                <li><a class="fi-mail" href="https://tom-konda.github.io/blog/contact"></a></li>
-            </ul>
             
             <h1 class="blog-title">Tom-konda的技術メモ</h1>
-            <hr>
-            <p class="blog-description">技術的な備忘録やメモを置いておく場所</p>
-            <div class="blog-network">
-<!--                 <a href="#" class="fi-social-pinterest"></a>
-                <a href="#" class="fi-social-linkedin"></a>
-                <a href="#" class="fi-social-behance"></a>
-                <a href="#" class="fi-social-deviant-art"></a>
-                <a href="#" class="fi-social-dribbble"></a>
-                <a href="#" class="fi-social-flickr"></a>
-                <a href="#" class="fi-social-github"></a>
-                <a href="#" class="fi-social-skype"></a>
-                <a href="#" class="fi-social-snapchat"></a>
-                <a href="#" class="fi-social-steam"></a>
-                <a href="#" class="fi-social-xbox"></a>
-                <a href="#" class="fi-social-reddit"></a> -->
-                  <a href="https://github.com/tom-konda" class="fi-social-github"></a>
-                  <a href="https://twitter.com/tom_k_en" class="fi-social-twitter"></a>
-            </div>
+            <h2 class="blog-description">技術的な備忘録やメモを置いておく場所</h2>
         </div>
     </div>
 </header>
-
-</div>
-
-
-<div class="small-16 medium-16 large-12 columns main-column left">
-    
-
-
-
-
 
 <main class="content" role="main">
 
 
     <article class="post tag-Hubpress tag-Github">
         <header class="post-header">
-            <span class="post-meta"><time datetime="2016-03-16">16 Mar 2016</time> </span>
+            <span class="post-meta"><time datetime="2016-03-16">16 Mar 2016</time> on <a href="https://tom-konda.github.io/blog/tag/Hubpress/">Hubpress</a>, <a href="https://tom-konda.github.io/blog/tag/Github/">Github</a></span>
             <h2 class="post-title"><a href="https://tom-konda.github.io/blog/2016/03/16/How-to-update-hubpress.html">Hubpress のアップデート方法</a></h2>
 
+            <!--<a href="https://tom-konda.github.io/blog/2016/03/16/How-to-update-hubpress.html#disqus_thread"></a>-->
         </header>
         <section class="post-excerpt">
             <p>Hubpress がアップデートされていたので、そのアップデート手順を記載する。 Hubpress を Fork している、Githubのレポジトリページを開く Compare をクリックする base fork を自分のレポジトリに変更する compare across fork をクリックする head fork を Hubpress 公式に変更する Create Pull Request をクリックする 適当に入力して、PR をする Fork しているレポジトリの PR 一覧に飛んだら、作成した PR を承認する&hellip;</p>
         </section>
-        <a class="button read-more right small" href="https://tom-konda.github.io/blog/2016/03/16/How-to-update-hubpress.html">Read more</a>
-        <aside class="tags fi-pricetag-multiple">Posted on <a href="https://tom-konda.github.io/blog/tag/Hubpress/">Hubpress</a>, <a href="https://tom-konda.github.io/blog/tag/Github/">Github</a></aside>
-        <div class="clearfix"></div>
     </article>
 
 
     <article class="post tag-PHP tag-Mac-OSX">
         <header class="post-header">
-            <span class="post-meta"><time datetime="2016-01-13">13 Jan 2016</time> </span>
+            <span class="post-meta"><time datetime="2016-01-13">13 Jan 2016</time> on <a href="https://tom-konda.github.io/blog/tag/PHP/">PHP</a>, <a href="https://tom-konda.github.io/blog/tag/Mac-OSX/"> Mac OSX</a></span>
             <h2 class="post-title"><a href="https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html">anyenv によるMacへの phpenv + phpbuild 環境の構築</a></h2>
 
+            <!--<a href="https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html#disqus_thread"></a>-->
         </header>
         <section class="post-excerpt">
-            <p>環境の構築は Yosemite にて確認。 以下のコマンドで、Mac に anyenv を導入することができる。 $ git clone https://github.com/riywo/anyenv ~/.anyenv $ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' &gt;&gt; ~/.bash_profile $ echo 'eval "$(anyenv init -)"' &gt;&gt; ~/.bash_profile $ exec $SHELL -l 導入が終わったら、 $ anyenv version Usage: anyenv &lt;command&gt; [&lt;args&gt;] Some useful anyenv commands are: （省略） でインストールされたことを確認。 Mac に anyenv で&hellip;</p>
+            <p>環境の構築は Yosemite にて確認。 以下のコマンドで、Mac に anyenv を導入することができる。 $ git clone https://github.com/riywo/anyenv ~/.anyenv $ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' &gt;&gt; ~/.bash_profile $ echo 'eval "$(anyenv init -)"' &gt;&gt; ~/.bash_profile $ exec $SHELL -l 導入が終わったら、 $ anyenv version Usage: anyenv &lt;command&gt; [&lt;&hellip;</p>
         </section>
-        <a class="button read-more right small" href="https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html">Read more</a>
-        <aside class="tags fi-pricetag-multiple">Posted on <a href="https://tom-konda.github.io/blog/tag/PHP/">PHP</a>, <a href="https://tom-konda.github.io/blog/tag/Mac-OSX/"> Mac OSX</a></aside>
-        <div class="clearfix"></div>
     </article>
 
 
     <article class="post tag-MS-Edge tag-Safari tag-Firefox">
         <header class="post-header">
-            <span class="post-meta"><time datetime="2016-01-07">07 Jan 2016</time> </span>
+            <span class="post-meta"><time datetime="2016-01-07">07 Jan 2016</time> on <a href="https://tom-konda.github.io/blog/tag/MS-Edge/">MS Edge</a>, <a href="https://tom-konda.github.io/blog/tag/Safari/"> Safari</a>, <a href="https://tom-konda.github.io/blog/tag/Firefox/"> Firefox</a></span>
             <h2 class="post-title"><a href="https://tom-konda.github.io/blog/2016/01/07/browsers_spec.html">各ブラウザの仕様の一覧</a></h2>
 
+            <!--<a href="https://tom-konda.github.io/blog/2016/01/07/browsers_spec.html#disqus_thread"></a>-->
         </header>
         <section class="post-excerpt">
             <p>Qiitaに投稿した時 に調べた各ブラウザの DOM 仕様が載っているURLへのリンク集。MSDN や MDN は有名だけど、Safari は初めて知った。そして、Google Chrome は見つけられず。 Internet Explorer &amp; Edge https://msdn.microsoft.com/library/hh772401%28v=vs.85%29.aspx Safari https://developer.apple.com/library/safari/navigation/ Firefox https://developer.mozilla.org/&hellip;</p>
         </section>
-        <a class="button read-more right small" href="https://tom-konda.github.io/blog/2016/01/07/browsers_spec.html">Read more</a>
-        <aside class="tags fi-pricetag-multiple">Posted on <a href="https://tom-konda.github.io/blog/tag/MS-Edge/">MS Edge</a>, <a href="https://tom-konda.github.io/blog/tag/Safari/"> Safari</a>, <a href="https://tom-konda.github.io/blog/tag/Firefox/"> Firefox</a></aside>
-        <div class="clearfix"></div>
     </article>
 
 
     <article class="post tag-Nodejs tag-Shell-Script tag-Memo">
         <header class="post-header">
-            <span class="post-meta"><time datetime="2015-11-22">22 Nov 2015</time> </span>
+            <span class="post-meta"><time datetime="2015-11-22">22 Nov 2015</time> on <a href="https://tom-konda.github.io/blog/tag/Nodejs/">Node.js</a>, <a href="https://tom-konda.github.io/blog/tag/Shell-Script/"> Shell Script</a>, <a href="https://tom-konda.github.io/blog/tag/Memo/"> Memo</a></span>
             <h2 class="post-title"><a href="https://tom-konda.github.io/blog/2015/11/22/nodebrew_install_memo.html">Nodebrew インストール手順メモ（Mac）</a></h2>
 
+            <!--<a href="https://tom-konda.github.io/blog/2015/11/22/nodebrew_install_memo.html#disqus_thread"></a>-->
         </header>
         <section class="post-excerpt">
-            <p>Yosemiteでは、Homebrewからはインストールできない(http://qiita.com/armorik83/items/ed97c618a55d9c13c34b) ので、(https://github.com/hokaccha/nodebrew#install) にある方法を使用する 動作確認 Mac OS X Yosemite Nodebrew のインストール 以下のシェルだと現在はうごかない $ brew install nodebrew $ echo export PATH=$HOME/.nodebrew/current/bin:$PATH &gt;&gt; ~/.bash_profile $ source ~/.bash_profile こちらを使用する。 # Homebrewでインストールしてしまった場合は、アンインストールする $ brew uninstall n&hellip;</p>
+            <p>Yosemiteでは、Homebrewからはインストールできない(http://qiita.com/armorik83/items/ed97c618a55d9c13c34b) ので、(https://github.com/hokaccha/nodebrew#install) にある方法を使用する 動作確認 Mac OS X Yosemite Nodebrew のインストール 以下のシェルだと現在はうごかない $ brew install nodebrew $ echo export PATH=$HOME/.nodebrew/current/bin:$PATH &gt;&gt; ~/.bash_profile $ source ~/.bash_profile こちらを使用する。 # Home&hellip;</p>
         </section>
-        <a class="button read-more right small" href="https://tom-konda.github.io/blog/2015/11/22/nodebrew_install_memo.html">Read more</a>
-        <aside class="tags fi-pricetag-multiple">Posted on <a href="https://tom-konda.github.io/blog/tag/Nodejs/">Node.js</a>, <a href="https://tom-konda.github.io/blog/tag/Shell-Script/"> Shell Script</a>, <a href="https://tom-konda.github.io/blog/tag/Memo/"> Memo</a></aside>
-        <div class="clearfix"></div>
     </article>
 
 
     <article class="post tag-Java-Script tag-Drupal7">
         <header class="post-header">
-            <span class="post-meta"><time datetime="2015-09-17">17 Sep 2015</time> </span>
+            <span class="post-meta"><time datetime="2015-09-17">17 Sep 2015</time> on <a href="https://tom-konda.github.io/blog/tag/Java-Script/">JavaScript</a>, <a href="https://tom-konda.github.io/blog/tag/Drupal7/"> Drupal7</a></span>
             <h2 class="post-title"><a href="https://tom-konda.github.io/blog/2015/09/17/drupal_add_js-JavaScript.html">drupal_add_js() でJavaScriptファイル追加時の備忘録</a></h2>
 
+            <!--<a href="https://tom-konda.github.io/blog/2015/09/17/drupal_add_js-JavaScript.html#disqus_thread"></a>-->
         </header>
         <section class="post-excerpt">
             <p>JavaScriptの圧縮をしている時に正常に動かなくなるので、メモとして残しておく。 // 第2引数の配列で読み込みの方式を指定する drupal_add_js(   drupal_get_path('module', 'my_module').'/js/myjs.js',   array('type' =&gt; 'file') );&hellip;</p>
         </section>
-        <a class="button read-more right small" href="https://tom-konda.github.io/blog/2015/09/17/drupal_add_js-JavaScript.html">Read more</a>
-        <aside class="tags fi-pricetag-multiple">Posted on <a href="https://tom-konda.github.io/blog/tag/Java-Script/">JavaScript</a>, <a href="https://tom-konda.github.io/blog/tag/Drupal7/"> Drupal7</a></aside>
-        <div class="clearfix"></div>
     </article>
 
 
     <article class="post tag-Java-Script tag-DOM tag-XML">
         <header class="post-header">
-            <span class="post-meta"><time datetime="2015-08-28">28 Aug 2015</time> </span>
+            <span class="post-meta"><time datetime="2015-08-28">28 Aug 2015</time> on <a href="https://tom-konda.github.io/blog/tag/Java-Script/">JavaScript</a>, <a href="https://tom-konda.github.io/blog/tag/DOM/"> DOM</a>, <a href="https://tom-konda.github.io/blog/tag/XML/"> XML</a></span>
             <h2 class="post-title"><a href="https://tom-konda.github.io/blog/2015/08/28/elementgetElementsByTagNameNS.html">element.getElementsByTagNameNS() で要素の取得がうまくいかないと思ったら、やり方が間違っていた</a></h2>
 
+            <!--<a href="https://tom-konda.github.io/blog/2015/08/28/elementgetElementsByTagNameNS.html#disqus_thread"></a>-->
         </header>
         <section class="post-excerpt">
-            <p>基盤地図情報のXMLデータを使ったツールを作ろうとした際に、XML文書が妥当な物かをチェックするために、下記のコードで、 element.getElementsByTagNameNS() で名前空間と要素で判断しようとしたところ、lengthが0になってしまい失敗。 &lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;Dataset xsi:schemaLocation="http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema FGD_GMLSchema.xsd" 	xmlns:gml="http://www.opengis.net/gml/3.2" 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 	xmlns:xlink="http://www.&hellip;</p>
+            <p>基盤地図情報のXMLデータを使ったツールを作ろうとした際に、XML文書が妥当な物かをチェックするために、下記のコードで、 element.getElementsByTagNameNS() で名前空間と要素で判断しようとしたところ、lengthが0になってしまい失敗。 &lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;Dataset xsi:schemaLocation="http://fgd.gsi.go.jp/spec/2008/FGD_GMLSchema FGD_GMLSchema.xsd" 	xmlns:gml="http://www.opengis.net/gml/3.2" 	xmlns:xsi="http://www.w3.org/&hellip;</p>
         </section>
-        <a class="button read-more right small" href="https://tom-konda.github.io/blog/2015/08/28/elementgetElementsByTagNameNS.html">Read more</a>
-        <aside class="tags fi-pricetag-multiple">Posted on <a href="https://tom-konda.github.io/blog/tag/Java-Script/">JavaScript</a>, <a href="https://tom-konda.github.io/blog/tag/DOM/"> DOM</a>, <a href="https://tom-konda.github.io/blog/tag/XML/"> XML</a></aside>
-        <div class="clearfix"></div>
     </article>
 
 
@@ -221,22 +157,26 @@
     <span class="page-number">Page 1 of 1</span>
 </nav>
 
-    <div class="row">
-        <footer class="small-16 columns site-footer">
-            <a class="subscribe icon-feed" href="https://tom-konda.github.io/blog/rss/"><span class="tooltip">Subscribe!</span></a>
-            <div class="inner">
-                <section class="published">Proudly published with <a href="http://hubpress.io" target="_blank">HubPress</a></section>
-                 <section class="copyright">All content copyright <a href="https://tom-konda.github.io/blog/">Tom-konda的技術メモ</a> &copy; 2017</section>
-                 <section class="theme-author">Theme (<a href="https://github.com/twogrey/ichi">download here</a>) developed by <a href="https://alexisdegryse.fr">Alexis Degryse</a></section>
-            </div>
-        </footer>
-    </div>
 
+    <script type="text/javascript">
+    var disqus_shortname = ''; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
 </main>
 
-</div>
 
-</div>
+    <footer class="site-footer">
+        <!-- <a class="subscribe icon-feed" href="https://tom-konda.github.io/blog/rss/"><span class="tooltip">Subscribe!</span></a> -->
+        <div class="inner">
+             <section class="copyright">All content copyright <a href="/">Tom-konda的技術メモ</a> &copy; 2017 &bull; All rights reserved.</section>
+             <section class="poweredby">Proudly published with <a href="http://hubpress.io">HubPress</span></a> in <a href="https://github.com/mityalebedev/The-Shell">The Shell</a> theme.</section>
+        </div>
+    </footer>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js?v="></script> 
       <script type="text/javascript">
@@ -251,24 +191,7 @@
         hljs.initHighlightingOnLoad();
       </script>
 
-    <!--[if lte IE 8]>
-        <script type="text/javascript" src="//tom-konda.github.io/blog/themes/ichi/assets/js/outdatedBrowser.min.js?v=1510543134242"></script>
-    <![endif]-->
-    <script type="text/javascript" src="//tom-konda.github.io/blog/themes/ichi/assets/js/min/built.js?v=1510543134242"></script>
-
-    <script>
-      $(document).foundation();
-    </script>
-
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-12732179-5', 'auto');
-    ga('send', 'pageview');
-
-    </script>
+    <script type='text/javascript' src="//tom-konda.github.io/blog/themes/the-shell/assets/highlighter/prettify.js?v=1510543301437"></script>
+    <script type='text/javascript' src="//tom-konda.github.io/blog/themes/the-shell/assets/js/shell.js?v=1510543301437"></script>
 </body>
 </html>
