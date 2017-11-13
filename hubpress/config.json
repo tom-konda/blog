@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "ghostium"
+    "name": "the-shell"
   },
   "urls": {
     "site": "https://tom-konda.github.io/blog",
     "hubpress": "https://tom-konda.github.io/blog",
-    "theme": "//tom-konda.github.io/blog/themes/ichi",
+    "theme": "//tom-konda.github.io/blog/themes/ghostium",
     "images": "https://tom-konda.github.io/blog/images"
   },
   "initialisationConfigComponent": {
