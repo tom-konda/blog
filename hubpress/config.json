@@ -28,12 +28,22 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "casper"
+    "name": "roon"
   },
   "urls": {
     "site": "https://tom-konda.github.io/blog",
     "hubpress": "https://tom-konda.github.io/blog",
-    "theme": "//tom-konda.github.io/blog/themes/saga",
+    "theme": "//tom-konda.github.io/blog/themes/casper",
     "images": "https://tom-konda.github.io/blog/images"
+  },
+  "initialisationConfigComponent": {
+    "name": "initialise-configuration",
+    "computed": {},
+    "methods": {},
+    "staticRenderFns": [
+      null,
+      null,
+      null
+    ]
   }
 }
