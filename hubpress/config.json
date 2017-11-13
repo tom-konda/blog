@@ -6,7 +6,7 @@
     "cname": ""
   },
   "site": {
-    "title": "tom-konda的技術メモ",
+    "title": "Tom-konda的技術メモ",
     "description": "技術的な備忘録やメモを置いておく場所",
     "googleAnalytics": "UA-12732179-5",
     "logo": "",
@@ -28,12 +28,12 @@
     "stackoverflow": ""
   },
   "theme": {
-    "name": "roon"
+    "name": "ichi"
   },
   "urls": {
     "site": "https://tom-konda.github.io/blog",
     "hubpress": "https://tom-konda.github.io/blog",
-    "theme": "//tom-konda.github.io/blog/themes/casper",
+    "theme": "//tom-konda.github.io/blog/themes/roon",
     "images": "https://tom-konda.github.io/blog/images"
   },
   "initialisationConfigComponent": {
