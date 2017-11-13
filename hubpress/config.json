@@ -33,7 +33,7 @@
   "urls": {
     "site": "https://tom-konda.github.io/blog",
     "hubpress": "https://tom-konda.github.io/blog",
-    "theme": "//tom-konda.github.io/blog/themes/uno-zen",
+    "theme": "//tom-konda.github.io/blog/themes/uno",
     "images": "https://tom-konda.github.io/blog/images"
   },
   "initialisationConfigComponent": {
