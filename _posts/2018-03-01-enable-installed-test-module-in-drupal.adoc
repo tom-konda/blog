@@ -1,0 +1,19 @@
+= Drupal でテスト用のモジュールを有効化できるようにするメモ
+
+:published_at: 2018-03-01
+:hp-tags: Drupal, Testing
+:hp-alt-title: enable_installed_test_module_in_drupal
+
+https://qiita.com/J_Sugar__/items/4bb37a9511c99189a558[この記事]にある、下記の記述を settings.php に記述する。
+
+.settings.php
+[source,php]
+----
+<?php
+  /**
+   * Allow test modules and themes to be installed.
+   */
+  $settings['extension_discovery_scan_tests'] = TRUE;
+----
+
+これを有効にしておくと、 https://github.com/drupal/drupal/tree/8.4.x/core/modules/system/tests/src[`drupal/core/modules/system/tests/`] にあるテスト用 Entity を使用できるようになるので、フィールドや Views 関係のテスト時に便利そう。
