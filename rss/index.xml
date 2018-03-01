@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tom-konda的技術メモ]]></title><description><![CDATA[技術的な備忘録やメモを置いておく場所]]></description><link>https://tom-konda.github.io/blog</link><generator>RSS for Node</generator><lastBuildDate>Mon, 13 Nov 2017 04:39:12 GMT</lastBuildDate><atom:link href="https://tom-konda.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Hubpress のアップデート方法]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tom-konda的技術メモ]]></title><description><![CDATA[技術的な備忘録やメモを置いておく場所]]></description><link>https://tom-konda.github.io/blog</link><generator>RSS for Node</generator><lastBuildDate>Thu, 01 Mar 2018 14:34:43 GMT</lastBuildDate><atom:link href="https://tom-konda.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Drupal でテスト用のモジュールを有効化できるようにするメモ]]></title><description><![CDATA[<div class="paragraph">
+<p><a href="https://qiita.com/J_Sugar__/items/4bb37a9511c99189a558">この記事</a>にある、下記の記述を settings.php に記述する。</p>
+</div>
+<div class="listingblock">
+<div class="title">settings.php</div>
+<div class="content">
+<pre class="highlight"><code class="language-php" data-lang="php">&lt;?php
+  /**
+   * Allow test modules and themes to be installed.
+   */
+  $settings['extension_discovery_scan_tests'] = TRUE;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>これを有効にしておくと、 <a href="https://github.com/drupal/drupal/tree/8.4.x/core/modules/system/tests/src"><code>drupal/core/modules/system/tests/</code></a> にあるテスト用 Entity を使用できるようになるので、フィールドや Views 関係のテスト時に便利そう。</p>
+</div>]]></description><link>https://tom-konda.github.io/blog/2018/03/01/enable-installed-test-module-in-drupal.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2018/03/01/enable-installed-test-module-in-drupal.html</guid><category><![CDATA[Drupal]]></category><category><![CDATA[Testing]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Thu, 01 Mar 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Hubpress のアップデート方法]]></title><description><![CDATA[<div class="paragraph">
 <p>Hubpress がアップデートされていたので、そのアップデート手順を記載する。</p>
 </div>
 <div class="olist arabic">
@@ -112,7 +127,7 @@ $ phpenv install 7.0.2
 $ phpenv global 7.0.2
 $ brew unlink bison27</code></pre>
 </div>
-</div>]]></description><link>https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html</guid><category><![CDATA[PHP]]></category><category><![CDATA[ Mac OSX]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Wed, 13 Jan 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[各ブラウザの仕様の一覧]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html</guid><category><![CDATA[PHP]]></category><category><![CDATA[Mac OSX]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Wed, 13 Jan 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[各ブラウザの仕様の一覧]]></title><description><![CDATA[<div class="paragraph">
 <p><a href="http://qiita.com/tom_konda/items/864e285defc1b17f7a0e">Qiitaに投稿した時</a> に調べた各ブラウザの <abbr title="Document Object Model">DOM</abbr> 仕様が載っているURLへのリンク集。<abbr title="Microsoft Deverolper Network">MSDN</abbr> や <abbr title="Mozilla Deverolper Network">MDN</abbr> は有名だけど、Safari は初めて知った。そして、Google Chrome は見つけられず。</p>
 </div>
 <div class="dlist">
@@ -130,7 +145,7 @@ $ brew unlink bison27</code></pre>
 <p><a href="https://developer.mozilla.org/" class="bare">https://developer.mozilla.org/</a></p>
 </dd>
 </dl>
-</div>]]></description><link>https://tom-konda.github.io/blog/2016/01/07/browsers_spec.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2016/01/07/browsers_spec.html</guid><category><![CDATA[MS Edge]]></category><category><![CDATA[ Safari]]></category><category><![CDATA[ Firefox]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Thu, 07 Jan 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Nodebrew インストール手順メモ（Mac）]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://tom-konda.github.io/blog/2016/01/07/browsers_spec.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2016/01/07/browsers_spec.html</guid><category><![CDATA[MS Edge]]></category><category><![CDATA[Safari]]></category><category><![CDATA[Firefox]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Thu, 07 Jan 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Nodebrew インストール手順メモ（Mac）]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock important">
 <table>
@@ -204,7 +219,7 @@ $ source ~/.bash_profile</code></pre>
 </div>
 </div>
 </div>
-</div>]]></description><link>https://tom-konda.github.io/blog/2015/11/22/nodebrew_install_memo.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2015/11/22/nodebrew_install_memo.html</guid><category><![CDATA[Node.js]]></category><category><![CDATA[ Shell Script]]></category><category><![CDATA[ Memo]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Sun, 22 Nov 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[drupal_add_js() でJavaScriptファイル追加時の備忘録]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://tom-konda.github.io/blog/2015/11/22/nodebrew_install_memo.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2015/11/22/nodebrew_install_memo.html</guid><category><![CDATA[Node.js]]></category><category><![CDATA[Shell Script]]></category><category><![CDATA[Memo]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Sun, 22 Nov 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[drupal_add_js() でJavaScriptファイル追加時の備忘録]]></title><description><![CDATA[<div class="paragraph">
 <p>JavaScriptの圧縮をしている時に正常に動かなくなるので、メモとして残しておく。</p>
 </div>
 <div class="listingblock">
@@ -215,7 +230,7 @@ drupal_add_js(
   array('type' =&gt; 'file')
 );</code></pre>
 </div>
-</div>]]></description><link>https://tom-konda.github.io/blog/2015/09/17/drupal_add_js-JavaScript.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2015/09/17/drupal_add_js-JavaScript.html</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[ Drupal7]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Thu, 17 Sep 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[element.getElementsByTagNameNS() で要素の取得がうまくいかないと思ったら、やり方が間違っていた]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://tom-konda.github.io/blog/2015/09/17/drupal_add_js-JavaScript.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2015/09/17/drupal_add_js-JavaScript.html</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Drupal7]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Thu, 17 Sep 2015 00:00:00 GMT</pubDate></item><item><title><![CDATA[element.getElementsByTagNameNS() で要素の取得がうまくいかないと思ったら、やり方が間違っていた]]></title><description><![CDATA[<div class="paragraph">
 <p>基盤地図情報のXMLデータを使ったツールを作ろうとした際に、XML文書が妥当な物かをチェックするために、下記のコードで、 element.getElementsByTagNameNS() で名前空間と要素で判断しようとしたところ、lengthが0になってしまい失敗。</p>
 </div>
 <div class="listingblock">
@@ -268,4 +283,4 @@ drupal_add_js(
   });
 };</code></pre>
 </div>
-</div>]]></description><link>https://tom-konda.github.io/blog/2015/08/28/elementgetElementsByTagNameNS.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2015/08/28/elementgetElementsByTagNameNS.html</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[ DOM]]></category><category><![CDATA[ XML]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Fri, 28 Aug 2015 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://tom-konda.github.io/blog/2015/08/28/elementgetElementsByTagNameNS.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2015/08/28/elementgetElementsByTagNameNS.html</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[DOM]]></category><category><![CDATA[XML]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Fri, 28 Aug 2015 00:00:00 GMT</pubDate></item></channel></rss>
