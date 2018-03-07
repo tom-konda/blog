@@ -32,7 +32,7 @@
   },
   "urls": {
     "site": "https://tom-konda.github.io/blog",
-    "hubpress": "https://tom-konda.github.io/blog",
+    "hubpress": "http://tom-konda.github.io/blog",
     "theme": "//tom-konda.github.io/blog/themes/saga",
     "images": "https://tom-konda.github.io/blog/images"
   },
