@@ -11,20 +11,20 @@
     <link href="//fonts.googleapis.com/css?family=Noto+Sans:300,400,700" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic" rel="stylesheet" type="text/css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href="//tom-konda.github.io/blog/themes/saga/assets/css/style.css?v=1510547952447" rel="stylesheet" type="text/css">
-    <link href="//tom-konda.github.io/blog/themes/saga/assets/css/animate.min.css?v=1510547952447" rel="stylesheet" type="text/css">
+    <link href="//tom-konda.github.io/blog/themes/saga/assets/css/style.css?v=1520556399124" rel="stylesheet" type="text/css">
+    <link href="//tom-konda.github.io/blog/themes/saga/assets/css/animate.min.css?v=1520556399124" rel="stylesheet" type="text/css">
     <link href="https://tom-konda.github.io/blog/favicon.ico" rel="shortcut icon">
     <link rel="canonical" href="https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html" />
     <meta name="referrer" content="origin" />
     
-    <meta property="og:site_name" content="Tom-konda的技術メモ" />
+    <meta property="og:site_name" content="Tom-Konda的技術メモ" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="anyenv によるMacへの phpenv + phpbuild 環境の構築" />
     <meta property="og:description" content="環境の構築は Yosemite にて確認。 以下のコマンドで、Mac に anyenv を導入することができる。 $ git clone https://github.com/riywo/anyenv ~/.anyenv $ echo &#x27;export PATH&#x3D;&quot;$HOME/.anyenv/bin:$PATH&quot;&#x27; &amp;gt;&amp;gt; ~/.bash_profile $ echo &#x27;eval &quot;$(anyenv init -)&quot;&#x27; &amp;gt;&amp;gt; ~/.bash_profile $ exec $SHELL -l 導入が終わったら、 $ anyenv version Usage: anyenv &amp;lt;command&amp;gt; [&amp;lt;" />
     <meta property="og:url" content="https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html" />
     <meta property="article:published_time" content="2016-01-13T00:00:00.000Z" />
     <meta property="article:tag" content="PHP" />
-    <meta property="article:tag" content=" Mac OSX" />
+    <meta property="article:tag" content="Mac OSX" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="anyenv によるMacへの phpenv + phpbuild 環境の構築" />
@@ -35,24 +35,24 @@
 {
     "@context": "http://schema.org",
     "@type": "Article",
-    "publisher": "Tom-konda的技術メモ",
+    "publisher": "Tom-Konda的技術メモ",
     "author": {
         "@type": "Person",
         "name": " Tom Konda",
-        "image": "https://avatars.githubusercontent.com/u/3226261?v=3",
+        "image": "https://avatars2.githubusercontent.com/u/3226261?v=4",
         "url": "https://tom-konda.github.io/blog/author/tom-konda/",
         "description": "Web developer, Openstreetmap Mapper."
     },
     "headline": "anyenv によるMacへの phpenv + phpbuild 環境の構築",
     "url": "https://tom-konda.github.io/blog/2016/01/13/construct-phpenv-for-mac.html",
     "datePublished": "2016-01-13T00:00:00.000Z",
-    "keywords": "PHP,  Mac OSX",
+    "keywords": "PHP, Mac OSX",
     "description": "環境の構築は Yosemite にて確認。 以下のコマンドで、Mac に anyenv を導入することができる。 $ git clone https://github.com/riywo/anyenv ~/.anyenv $ echo &#x27;export PATH&#x3D;&quot;$HOME/.anyenv/bin:$PATH&quot;&#x27; &amp;gt;&amp;gt; ~/.bash_profile $ echo &#x27;eval &quot;$(anyenv init -)&quot;&#x27; &amp;gt;&amp;gt; ~/.bash_profile $ exec $SHELL -l 導入が終わったら、 $ anyenv version Usage: anyenv &amp;lt;command&amp;gt; [&amp;lt;"
 }
     </script>
 
     <meta name="generator" content="HubPress" />
-    <link rel="alternate" type="application/rss+xml" title="Tom-konda的技術メモ" href="https://tom-konda.github.io/blog/rss/" />
+    <link rel="alternate" type="application/rss+xml" title="Tom-Konda的技術メモ" href="https://tom-konda.github.io/blog/rss/" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css">
     
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
@@ -61,7 +61,7 @@
     <header id="header" class="animated fadeIn">
     <div class="header-background">
     <section class="blog-content">
-        <a id="site-url" class="blog-title" href="https://tom-konda.github.io/blog">Tom-konda的技術メモ</a>
+        <a id="site-url" class="blog-title" href="https://tom-konda.github.io/blog">Tom-Konda的技術メモ</a>
         <span class="blog-description">技術的な備忘録やメモを置いておく場所</span>
         <nav class="links fadeIn animated">
             <ul>
@@ -73,7 +73,7 @@
     <section class="header-content">
         <h1 class="post-title animated fadeInUp">anyenv によるMacへの phpenv + phpbuild 環境の構築</h1>
         <span class="post-data"><span class="date animated fadeInUp"><i class="fa fa-clock-o"></i> <time class="timesince date" data-timesince="1452610800" datetime="2016-01-13T00:00" title="13 January 2016">2 years ago</time></span>
-            <span class="tags animated fadeInUp"><i class="fa fa-tags"></i> <a href="https://tom-konda.github.io/blog/tag/PHP/">PHP</a>, <a href="https://tom-konda.github.io/blog/tag/Mac-OSX/"> Mac OSX</a></span>
+            <span class="tags animated fadeInUp"><i class="fa fa-tags"></i> <a href="https://tom-konda.github.io/blog/tag/PHP/">PHP</a>, <a href="https://tom-konda.github.io/blog/tag/Mac-OSX/">Mac OSX</a></span>
             <span class="author animated fadeInUp"><i class="fa fa-user"></i> <a href="https://tom-konda.github.io/blog/author/tom-konda/"> Tom Konda</a></span></span>
     </section>
     </div>
@@ -173,7 +173,7 @@ $ brew unlink bison27</code></pre>
 </main>
     <footer class="animated fadeIn" id="footer">
         <section class="colophon">
-          <section class="copyright">Copyright &copy; <span itemprop="copyrightHolder">Tom-konda的技術メモ</span>. <span rel="license">All Rights Reserved</span>.</section>
+          <section class="copyright">Copyright &copy; <span itemprop="copyrightHolder">Tom-Konda的技術メモ</span>. <span rel="license">All Rights Reserved</span>.</section>
           <section class="poweredby">Published with <a class="icon-ghost" href="http://hubpress.io">HubPress</a></section>
         </section>
         <section class="bottom">
@@ -194,7 +194,7 @@ $ brew unlink bison27</code></pre>
 
         hljs.initHighlightingOnLoad();
       </script>
-    <script src="//tom-konda.github.io/blog/themes/saga/assets/js/scripts.js?v=1510547952447"></script>
+    <script src="//tom-konda.github.io/blog/themes/saga/assets/js/scripts.js?v=1520556399124"></script>
     
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
