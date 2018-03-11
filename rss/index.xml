@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tom-Konda的技術メモ]]></title><description><![CDATA[技術的な備忘録やメモを置いておく場所]]></description><link>https://tom-konda.github.io/blog</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Mar 2018 00:46:39 GMT</lastBuildDate><atom:link href="https://tom-konda.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Drupal でテスト用のモジュールを有効化できるようにするメモ]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tom-Konda的技術メモ]]></title><description><![CDATA[技術的な備忘録やメモを置いておく場所]]></description><link>https://tom-konda.github.io/blog</link><generator>RSS for Node</generator><lastBuildDate>Sun, 11 Mar 2018 12:12:49 GMT</lastBuildDate><atom:link href="https://tom-konda.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[JavaScript でデスクトップ PC のカメラを使用するメモ]]></title><description><![CDATA[<div class="paragraph">
+<p>JavaScript でデスクトップ PC のカメラで画像を取得したい場合、<code>MediaDevices.getUserMedia()</code> を使用する必要がある。</p>
+</div>
+<div class="paragraph">
+<p>参考 URL：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://scrap.php.xdomain.jp/html5_getusermedia_api/">HTML5 getUserMedia APIでカメラが使ってみる</a></p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia">MediaDevices.getUserMedia()</a></p>
+</li>
+</ul>
+</div>]]></description><link>https://tom-konda.github.io/blog/2018/03/11/Using-camera-with-Java-Script-on-desktop.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2018/03/11/Using-camera-with-Java-Script-on-desktop.html</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Bookmark]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Sun, 11 Mar 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Drupal でテスト用のモジュールを有効化できるようにするメモ]]></title><description><![CDATA[<div class="paragraph">
 <p><a href="https://qiita.com/J_Sugar__/items/4bb37a9511c99189a558">この記事</a>にある、下記の記述を settings.php に記述する。</p>
 </div>
 <div class="listingblock">
