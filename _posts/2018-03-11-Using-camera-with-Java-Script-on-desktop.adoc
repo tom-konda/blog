@@ -1,0 +1,12 @@
+= JavaScript でデスクトップ PC のカメラを使用するメモ
+// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
+:published_at: 2018-03-11
+:hp-tags: JavaScript, Bookmark,
+:hp-alt-title: Using camera with JavaScript on desktop
+
+JavaScript でデスクトップ PC のカメラで画像を取得したい場合、`MediaDevices.getUserMedia()` を使用する必要がある。
+
+参考 URL：
+
+* http://scrap.php.xdomain.jp/html5_getusermedia_api/[HTML5 getUserMedia APIでカメラが使ってみる]
+* https://developer.mozilla.org/ja/docs/Web/API/MediaDevices/getUserMedia[MediaDevices.getUserMedia()]
