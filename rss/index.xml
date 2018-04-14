@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tom-Konda的技術メモ]]></title><description><![CDATA[技術的な備忘録やメモを置いておく場所]]></description><link>https://tom-konda.github.io/blog</link><generator>RSS for Node</generator><lastBuildDate>Sun, 11 Mar 2018 12:12:49 GMT</lastBuildDate><atom:link href="https://tom-konda.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[JavaScript でデスクトップ PC のカメラを使用するメモ]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Tom-Konda的技術メモ]]></title><description><![CDATA[技術的な備忘録やメモを置いておく場所]]></description><link>https://tom-konda.github.io/blog</link><generator>RSS for Node</generator><lastBuildDate>Sat, 14 Apr 2018 10:44:44 GMT</lastBuildDate><atom:link href="https://tom-konda.github.io/blog/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[PostCSS で SCSS ライクの表記をするためのプラグインのメモ]]></title><description><![CDATA[<div class="paragraph">
+<p>以前に調査した時にはページが生きていたけど、つい最近消えてしまったので Internet Archive のサイトへのリンク</p>
+</div>
+<div class="paragraph">
+<p><a href="https://web.archive.org/web/20170611104741/http://be-into.com/blog/web/11-plugins-to-make-postcss-closer-to-scss/">PostCSSをSCSS記法に近づける+便利にするためのプラグイン11選</a></p>
+</div>
+<div class="paragraph">
+<p>上記の紹介記事のうち、</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>postcss-easy-import</p>
+</li>
+<li>
+<p>postcss-sassy-mixins</p>
+</li>
+<li>
+<p>postcss-nested</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>この3つは鉄板とみなしていい気がする。</p>
+</div>]]></description><link>https://tom-konda.github.io/blog/2018/04/14/Plugins-for-PostCSS-which-can-write-like-SCSS-style.html</link><guid isPermaLink="true">https://tom-konda.github.io/blog/2018/04/14/Plugins-for-PostCSS-which-can-write-like-SCSS-style.html</guid><category><![CDATA[PostCSS]]></category><category><![CDATA[SCSS]]></category><category><![CDATA[Bookmark]]></category><dc:creator><![CDATA[ Tom Konda]]></dc:creator><pubDate>Sat, 14 Apr 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[JavaScript でデスクトップ PC のカメラを使用するメモ]]></title><description><![CDATA[<div class="paragraph">
 <p>JavaScript でデスクトップ PC のカメラで画像を取得したい場合、<code>MediaDevices.getUserMedia()</code> を使用する必要がある。</p>
 </div>
 <div class="paragraph">

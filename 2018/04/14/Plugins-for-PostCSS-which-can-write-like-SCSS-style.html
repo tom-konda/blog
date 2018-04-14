@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>PostCSS で SCSS ライクの表記をするためのプラグインのメモ</title>
+    <meta name="description" content="" />
+    <link href="//fonts.googleapis.com/css?family=Noto+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//tom-konda.github.io/blog/themes/saga/assets/css/style.css?v=1523702684964" rel="stylesheet" type="text/css">
+    <link href="//tom-konda.github.io/blog/themes/saga/assets/css/animate.min.css?v=1523702684964" rel="stylesheet" type="text/css">
+    <link href="https://tom-konda.github.io/blog/favicon.ico" rel="shortcut icon">
+    <link rel="canonical" href="https://tom-konda.github.io/blog/2018/04/14/Plugins-for-PostCSS-which-can-write-like-SCSS-style.html" />
+    <meta name="referrer" content="origin" />
+    
+    <meta property="og:site_name" content="Tom-Konda的技術メモ" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="PostCSS で SCSS ライクの表記をするためのプラグインのメモ" />
+    <meta property="og:description" content="以前に調査した時にはページが生きていたけど、つい最近消えてしまったので Internet Archive のサイトへのリンク PostCSSをSCSS記法に近づける+便利にするためのプラグイン11選 上記の紹介記事のうち、 postcss-easy-import postcss-sassy-mixins postcss-nested この3つは鉄板とみなしていい気がする。" />
+    <meta property="og:url" content="https://tom-konda.github.io/blog/2018/04/14/Plugins-for-PostCSS-which-can-write-like-SCSS-style.html" />
+    <meta property="article:published_time" content="2018-04-14T00:00:00.000Z" />
+    <meta property="article:tag" content="PostCSS" />
+    <meta property="article:tag" content="SCSS" />
+    <meta property="article:tag" content="Bookmark" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PostCSS で SCSS ライクの表記をするためのプラグインのメモ" />
+    <meta name="twitter:description" content="以前に調査した時にはページが生きていたけど、つい最近消えてしまったので Internet Archive のサイトへのリンク PostCSSをSCSS記法に近づける+便利にするためのプラグイン11選 上記の紹介記事のうち、 postcss-easy-import postcss-sassy-mixins postcss-nested この3つは鉄板とみなしていい気がする。" />
+    <meta name="twitter:url" content="https://tom-konda.github.io/blog/2018/04/14/Plugins-for-PostCSS-which-can-write-like-SCSS-style.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Tom-Konda的技術メモ",
+    "author": {
+        "@type": "Person",
+        "name": " Tom Konda",
+        "image": "https://avatars2.githubusercontent.com/u/3226261?v=4",
+        "url": "https://tom-konda.github.io/blog/author/tom-konda/",
+        "description": "Web developer, Openstreetmap Mapper."
+    },
+    "headline": "PostCSS で SCSS ライクの表記をするためのプラグインのメモ",
+    "url": "https://tom-konda.github.io/blog/2018/04/14/Plugins-for-PostCSS-which-can-write-like-SCSS-style.html",
+    "datePublished": "2018-04-14T00:00:00.000Z",
+    "keywords": "PostCSS, SCSS, Bookmark",
+    "description": "以前に調査した時にはページが生きていたけど、つい最近消えてしまったので Internet Archive のサイトへのリンク PostCSSをSCSS記法に近づける+便利にするためのプラグイン11選 上記の紹介記事のうち、 postcss-easy-import postcss-sassy-mixins postcss-nested この3つは鉄板とみなしていい気がする。"
+}
+    </script>
+
+    <meta name="generator" content="HubPress" />
+    <link rel="alternate" type="application/rss+xml" title="Tom-Konda的技術メモ" href="https://tom-konda.github.io/blog/rss/" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/atom-one-dark.min.css">
+    
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+<body class="post-template tag-PostCSS tag-SCSS tag-Bookmark">
+    <header id="header" class="animated fadeIn">
+    <div class="header-background">
+    <section class="blog-content">
+        <a id="site-url" class="blog-title" href="https://tom-konda.github.io/blog">Tom-Konda的技術メモ</a>
+        <span class="blog-description">技術的な備忘録やメモを置いておく場所</span>
+        <nav class="links fadeIn animated">
+            <ul>
+                <li class="rss"><a title="RSS Feed" href="/rss/"><i class="fa fa-fw fa-rss-square"></i></a></li>
+        
+            </ul>
+        </nav>
+    </section>
+    <section class="header-content">
+        <h1 class="post-title animated fadeInUp">PostCSS で SCSS ライクの表記をするためのプラグインのメモ</h1>
+        <span class="post-data"><span class="date animated fadeInUp"><i class="fa fa-clock-o"></i> <time class="timesince date" data-timesince="1523631600" datetime="2018-04-14T00:00" title="14 April 2018">20 hours ago</time></span>
+            <span class="tags animated fadeInUp"><i class="fa fa-tags"></i> <a href="https://tom-konda.github.io/blog/tag/PostCSS/">PostCSS</a>, <a href="https://tom-konda.github.io/blog/tag/SCSS/">SCSS</a>, <a href="https://tom-konda.github.io/blog/tag/Bookmark/">Bookmark</a></span>
+            <span class="author animated fadeInUp"><i class="fa fa-user"></i> <a href="https://tom-konda.github.io/blog/author/tom-konda/"> Tom Konda</a></span></span>
+    </section>
+    </div>
+</header>
+<main id="main" class="content">
+    <article itemtype="http://schema.org/BlogPosting" class="animated fadeIn content post post tag-PostCSS tag-SCSS tag-Bookmark">
+        <section class="post-content">
+            <div class="paragraph">
+<p>以前に調査した時にはページが生きていたけど、つい最近消えてしまったので Internet Archive のサイトへのリンク</p>
+</div>
+<div class="paragraph">
+<p><a href="https://web.archive.org/web/20170611104741/http://be-into.com/blog/web/11-plugins-to-make-postcss-closer-to-scss/">PostCSSをSCSS記法に近づける+便利にするためのプラグイン11選</a></p>
+</div>
+<div class="paragraph">
+<p>上記の紹介記事のうち、</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>postcss-easy-import</p>
+</li>
+<li>
+<p>postcss-sassy-mixins</p>
+</li>
+<li>
+<p>postcss-nested</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>この3つは鉄板とみなしていい気がする。</p>
+</div>
+        </section>
+
+    </article>
+
+</main>
+    <footer class="animated fadeIn" id="footer">
+        <section class="colophon">
+          <section class="copyright">Copyright &copy; <span itemprop="copyrightHolder">Tom-Konda的技術メモ</span>. <span rel="license">All Rights Reserved</span>.</section>
+          <section class="poweredby">Published with <a class="icon-ghost" href="http://hubpress.io">HubPress</a></section>
+        </section>
+        <section class="bottom">
+          <section class="attribution">
+            <a href="http://github.com/Reedyn/Saga">Built with <i class="fa fa-heart"></i> and Free and Open-Source Software</a>.
+          </section>
+        </section>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();
+      </script>
+    <script src="//tom-konda.github.io/blog/themes/saga/assets/js/scripts.js?v=1523702684964"></script>
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-12732179-5', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
