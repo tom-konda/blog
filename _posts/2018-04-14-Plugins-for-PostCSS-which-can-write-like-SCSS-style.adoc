@@ -1,0 +1,18 @@
+= PostCSS で SCSS ライクの表記をするためのプラグインのメモ
+// See https://hubpress.gitbooks.io/hubpress-knowledgebase/content/ for information about the parameters.
+// :hp-image: /covers/cover.png
+:published_at: 2018-04-14
+:hp-tags: PostCSS, SCSS, Bookmark
+:hp-alt-title: Plugins for PostCSS which can write like SCSS style
+
+以前に調査した時にはページが生きていたけど、つい最近消えてしまったので Internet Archive のサイトへのリンク
+
+https://web.archive.org/web/20170611104741/http://be-into.com/blog/web/11-plugins-to-make-postcss-closer-to-scss/[PostCSSをSCSS記法に近づける+便利にするためのプラグイン11選]
+
+上記の紹介記事のうち、
+
+* postcss-easy-import
+* postcss-sassy-mixins
+* postcss-nested
+
+この3つは鉄板とみなしていい気がする。
