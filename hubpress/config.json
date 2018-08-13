@@ -31,12 +31,12 @@
     "opencollective": ""
   },
   "theme": {
-    "name": "uno"
+    "name": "saga"
   },
   "urls": {
     "site": "https://tom-konda.github.io/blog",
     "hubpress": "http://tom-konda.github.io/blog",
-    "theme": "//tom-konda.github.io/blog/themes/saga",
+    "theme": "//tom-konda.github.io/blog/themes/uno",
     "images": "https://tom-konda.github.io/blog/images"
   },
   "initialisationConfigComponent": {
