@@ -13,7 +13,8 @@
     "cover": "",
     "delay": "",
     "postsPerPage": "",
-    "disqus": ""
+    "disqus": "",
+    "blogPath": ""
   },
   "socialnetwork": {
     "twitter": "https://twitter.com/tom_k_en",
@@ -25,10 +26,12 @@
     "pinterest": "",
     "flickr": "",
     "linkedin": "",
-    "stackoverflow": ""
+    "stackoverflow": "",
+    "paypalme": "",
+    "opencollective": ""
   },
   "theme": {
-    "name": "saga"
+    "name": "uno"
   },
   "urls": {
     "site": "https://tom-konda.github.io/blog",
@@ -44,6 +47,11 @@
       null,
       null,
       null
+    ],
+    "_compiled": true,
+    "beforeCreate": [
+      null
     ]
-  }
+  },
+  "navigation": []
 }
